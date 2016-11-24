@@ -27,6 +27,6 @@ VALIDAR INTEIROS:   filter_int('name_da_requisicao', 'tipo_da_requisicao');
 
 VALIDAR FLOATS:     filter_float('name_da_requisicao', 'tipo_da_requisicao');
 
-VALIDAR STRINGS:    filter_string('name_da_requisicao', 'tipo_da_requisicao');/n \n
+VALIDAR STRINGS:    filter_string('name_da_requisicao', 'tipo_da_requisicao');
 
 VALIDAR BOOLEANOS:  filter_boolean('name_da_requisicao', 'tipo_da_requisicao');
