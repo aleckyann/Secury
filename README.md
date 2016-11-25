@@ -43,4 +43,4 @@ VALIDAR STRINGS:
 ```$string_segura = filter_string('name_da_requisicao', 'tipo_da_requisicao');```
 
 VALIDAR BOOLEANOS:  
-```$boolean_seguro= filter_boolean('name_da_requisicao', 'tipo_da_requisicao');```
+```$boolean_seguro = filter_boolean('name_da_requisicao', 'tipo_da_requisicao');```
