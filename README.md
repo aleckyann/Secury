@@ -9,6 +9,12 @@ Pare de usar as funções $_GET e $_POST para gravar dados em suas variáveis. I
 ```require "filter_input.php";```
 
 ---
+### COMO É:
+
+```filter_string('name-do-input-do-form', 'tipo-de-requisicao-get-ou-post')```
+
+
+---
 ### Para receber uma requisição post você pode fazer de 3 maneiras, sinta-se a vontade para usar a que achar mais confortável:
 ```
 $email = $filter_email('email', 'p');
