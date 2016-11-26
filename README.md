@@ -36,22 +36,22 @@ Filter::email('name_da_requisicao', 'tipo_da_requisicao');
 
 VALIDAR INTEIROS:
 ```  
-Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+Filter::int('name_da_requisicao', 'tipo_da_requisicao');
 ```
 
 VALIDAR FLOATS:
 ```     
-Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+Filter::float('name_da_requisicao', 'tipo_da_requisicao');
 ```
 
 VALIDAR STRINGS:
 ```   
-Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+Filter::string('name_da_requisicao', 'tipo_da_requisicao');
 ```
 
 VALIDAR BOOLEANOS:
 ```
-Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+Filter::boolean('name_da_requisicao', 'tipo_da_requisicao');
 ```
 
 ### Caso sua requisição não seja válida é retornada uma string com valor 'false'
