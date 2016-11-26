@@ -42,4 +42,4 @@ VALIDAR BOOLEANOS:  Filter::email('name_da_requisicao', 'tipo_da_requisicao');
 
 ### Caso sua requisição não seja válida é retornada uma string com valor:
 ---
- ```'false'```
+ ```false```
