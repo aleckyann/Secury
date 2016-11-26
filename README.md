@@ -28,18 +28,33 @@ $id = Filter::int('id', 'GET');
 
 ### Você poderá usar 5 tipos de filtros:
 ---
-```
-VALIDAR EMAILS:     Filter::email('name_da_requisicao', 'tipo_da_requisicao');
 
-VALIDAR INTEIROS:   Filter::email('name_da_requisicao', 'tipo_da_requisicao');
-
-VALIDAR FLOATS:     Filter::email('name_da_requisicao', 'tipo_da_requisicao');
-
-VALIDAR STRINGS:    Filter::email('name_da_requisicao', 'tipo_da_requisicao');
-
-VALIDAR BOOLEANOS:  Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+VALIDAR EMAILS:
+```     
+Filter::email('name_da_requisicao', 'tipo_da_requisicao');
 ```
 
-### Caso sua requisição não seja válida é retornada uma string com valor:
+VALIDAR INTEIROS:
+```  
+Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+```
+
+VALIDAR FLOATS:
+```     
+Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+```
+
+VALIDAR STRINGS:
+```   
+Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+```
+
+VALIDAR BOOLEANOS:
+```
+Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+```
+
+### Caso sua requisição não seja válida é retornada uma string com valor 'false'
 ---
- ```false```
+
+
