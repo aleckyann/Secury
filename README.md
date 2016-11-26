@@ -1,6 +1,6 @@
 # filter_input_php
 
-### Para começar usar os filtros basta adicioná-los em seu arquivo de load ou controller:
+### Para começar usar os filtros basta adicioná-los em seu arquivo de load ou controllers:
 ---
 ```
 require_once('Filter.php');
