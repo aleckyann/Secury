@@ -60,5 +60,5 @@ Filter::postBoolean('name_da_requisicao');
 ### Caso sua requisição não seja válida é retornada uma string com valor 'false'
 ---
 
-Os filtros podem proteger sua aplicação de diversos injections, tais como PHP injection, script injection, html injection |  XSS, além de tipar a entrada de dados.
+Os filtros podem proteger sua aplicação de diversos injections, tais como: PHP injection, script injection, html injection |  XSS, além de tipar a entrada de dados.
 
