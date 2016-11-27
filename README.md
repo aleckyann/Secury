@@ -1,4 +1,5 @@
 # filter_input_php
+===
 
 ### Para começar usar os filtros basta adicioná-los em seu arquivo de load ou controllers:
 ---
@@ -6,55 +7,58 @@
 require_once('Filter.php');
 ```
 
-### Para receber uma requisição post você pode fazer de 3 maneiras, sinta-se a vontade para usar a que achar mais confortável:
+### Para receber e filtrar requisições post, exemplo:
 ---
 ```
-$email = Filter::email('email', 'p');
-
-$email = Filter::email('email', 'post');
-
-$email = Filter::email('email', 'POST');
+$email = Filter::postEmail('email');
 ```
 
-### Para requisições do tipo GET, você também pode optar por 3 formas diferentes:
+### Para receber e filtrar requisições get, exemplo:
 ---
 ```
-$id = Filter::int('id', 'g');
-
-$id = Filter::int('id', 'get');
-
-$id = Filter::int('id', 'GET');
+$id = Filter::getInt('id');
 ```
 
-### Você poderá usar 5 tipos de filtros:
+### Você poderá usar 5 tipos de filtros para requisições do tipo GET e 5 para requisições do tipo POST, veja:
 ---
 
 VALIDAR EMAILS:
 ```     
-Filter::email('name_da_requisicao', 'tipo_da_requisicao');
+Filter::getEmail('name_da_requisicao');
+
+Filter::postEmail('name_da_requisicao');
 ```
 
 VALIDAR INTEIROS:
 ```  
-Filter::int('name_da_requisicao', 'tipo_da_requisicao');
+Filter::getInt('name_da_requisicao');
+
+Filter::postInt('name_da_requisicao');
 ```
 
 VALIDAR FLOATS:
 ```     
-Filter::float('name_da_requisicao', 'tipo_da_requisicao');
+Filter::getFloat('name_da_requisicao');
+
+Filter::postFloat('name_da_requisicao');
 ```
 
 VALIDAR STRINGS:
 ```   
-Filter::string('name_da_requisicao', 'tipo_da_requisicao');
+Filter::getString('name_da_requisicao');
+
+Filter::postString('name_da_requisicao');
 ```
 
 VALIDAR BOOLEANOS:
 ```
-Filter::boolean('name_da_requisicao', 'tipo_da_requisicao');
+Filter::getBoolean('name_da_requisicao');
+
+Filter::postBoolean('name_da_requisicao');
 ```
 
 ### Caso sua requisição não seja válida é retornada uma string com valor 'false'
 ---
 
+Os filtros podem proteger sua aplicação de diversos injections, tais como PHP injection, script injection, html injection |  XSS, além de tipar a entrada de dados.
 

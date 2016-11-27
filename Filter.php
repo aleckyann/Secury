@@ -2,76 +2,122 @@
 
 class Filter
 {
-  public static function string($name, $method, $result = null)
-  {
-    if($method == 'GET' || $method == 'get' || $method == 'g'){
-      $result = strip_tags(filter_input(INPUT_GET, $name, FILTER_SANITIZE_STRING));
-    }
-    if($method == 'POST' || $method == 'post' || $method == 'p'){
-      $result = strip_tags(filter_input(INPUT_POST, $name, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW));    
-    }
-    if($result){
-      return $result;
+  
+  public static function getString($name, $resultado = null)
+  { 
+    $input = filter_input(INPUT_GET, $name, FILTER_SANITIZE_STRING);
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
     } else {
       return 'false';
     }
   }
 
-  public static function int($name, $method, $result = null)
+  public static function postString($name, $resultado = null)
   {
-    if($method == 'GET' || $method == 'get' || $method == 'g'){
-      $result = strip_tags(filter_input(INPUT_GET, $name, FILTER_VALIDATE_INT));
-    }
-    if($method == 'POST' || $method == 'post' || $method == 'p'){
-      $result = strip_tags(filter_input(INPUT_POST, $name, FILTER_VALIDATE_INT));    
-    }
-    if($result){
-      return $result;
+    $input = filter_input(INPUT_POST, $name, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
+    $resultado = strip_tags($input);    
+
+    if($resultado){
+      return $resultado;
     } else {
       return 'false';
     }
   }
 
-  public static function boolean($name, $method, $result = null)
+  public static function getInt($name, $resultado = null)
   {
-    if($method == 'GET' || $method == 'get' || $method == 'g'){
-      $result = strip_tags(filter_input(INPUT_GET, $name, FILTER_VALIDATE_BOOLEAN));
+    $input = filter_input(INPUT_GET, $name, FILTER_VALIDATE_INT);
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
     }
-    if($method == 'POST' || $method == 'post' || $method == 'p'){
-      $result = strip_tags(filter_input(INPUT_POST, $name, FILTER_VALIDATE_BOOLEAN));    
+  }
+
+  public static function postInt($name, $resultado = null)
+  {
+    $input = filter_input(INPUT_POST, $name, FILTER_VALIDATE_INT);
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
     }
-    if($result){
+  }
+
+  public static function getBoolean($name, $resultado = null)
+  {
+    $input = filter_input(INPUT_GET, $name, FILTER_VALIDATE_BOOLEAN);
+    $resultado = strip_tags($input);
+
+    if($resultado){
       return 'true';
     } else {
       return 'false';
     }
   }
 
-  public static function float($name, $method, $result = null)
+  public static function postBoolean($name, $resultado = null)
   {
-    if($method == 'GET' || $method == 'get' || $method == 'g'){
-      $result = strip_tags(filter_input(INPUT_GET, $name, FILTER_VALIDATE_FLOAT));
-    }
-    if($method == 'POST' || $method == 'post' || $method == 'p'){
-      $result = strip_tags(filter_input(INPUT_POST, $name, FILTER_VALIDATE_FLOAT));    
-    }
-    if($result){
-      return $result;
+    $input = filter_input(INPUT_POST, $name, FILTER_VALIDATE_BOOLEAN);
+    $resultado = strip_tags($input);    
+
+    if($resultado){
+      return 'true';
     } else {
       return 'false';
     }
   }
 
-  public static function email($name, $method, $result = null)
+  public static function getFloat($name, $resultado = null)
   {
-    if($method == 'GET' || $method == 'get' || $method == 'g'){
-      $result = strip_tags(filter_input(INPUT_GET, $name, FILTER_VALIDATE_EMAIL));
+    $input = filter_input(INPUT_GET, $name, FILTER_VALIDATE_FLOAT);
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
     }
-    if($method == 'POST' || $method == 'post' || $method == 'p'){
-      $result = strip_tags(filter_input(INPUT_POST, $name, FILTER_VALIDATE_EMAIL));    
+  }
+
+  public static function postFloat($name, $resultado = null)
+  {
+    $input = filter_input(INPUT_POST, $name, FILTER_VALIDATE_FLOAT);
+    $resultado = strip_tags($input);    
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
     }
-    if($result){
-      return $result;
+  }
+
+  public static function getEmail($name, $resultado = null)
+  {
+    $input = filter_input(INPUT_GET, $name, FILTER_VALIDATE_EMAIL);
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
+    }
+  }
+
+  public static function postEmail($name, $resultado = null)
+  {
+    $input = filter_input(INPUT_POST, $name, FILTER_VALIDATE_EMAIL);
+    $resultado = strip_tags($input);    
+    
+    if($resultado){
+      return $resultado;
     } else {
       return 'false';
     }
