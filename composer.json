@@ -1,0 +1,15 @@
+{
+    "name" : "aleckyann/Filter",
+    "description" : "Classe simples para filtrar e receber requisições GET e POST.",
+    "require" : {
+        "php" : ">=5.4"
+    },
+    "type" : "library",
+    "version" : "1.0.1",
+    "license": "MIT",
+    "authors": [{
+        "name" : "Aleck Yann Marques de Matos",
+        "email" : "aleckyann@gmail.com"
+    }],
+    "minimum-stability": "dev"
+}
