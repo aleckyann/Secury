@@ -6,6 +6,10 @@
 ```
 require_once('Filter.php');
 ```
+## Ou com composer:
+```
+composer require aleckyann/filter:dev-master
+```
 
 ### Para receber e filtrar requisições post, exemplo:
 ---
