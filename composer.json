@@ -2,7 +2,8 @@
     "name" : "aleckyann/filter",
     "description" : "Classe simples para filtrar e receber requisições GET e POST.",
     "require" : {
-        "php" : ">=5.4"
+        "php" : ">=5.4",
+        "aleckyann/filter": "dev-master"
     },
     "type" : "project",
 
