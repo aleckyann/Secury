@@ -4,11 +4,14 @@
     "require" : {
         "php" : ">=5.4"
     },
-    "type" : "library",
+    "type" : "project",
     "version" : "1.0.1",
+    
     "license": "MIT",
     "authors": [{
         "name" : "Aleck Yann Marques de Matos",
         "email" : "aleckyann@gmail.com"
-    }]
+    }],
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
