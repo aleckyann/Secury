@@ -3,9 +3,9 @@
     "description" : "Classe simples para filtrar e receber requisições GET e POST.",
     "require" : {
         "php" : ">=5.4",
-        "aleckyann/filter": "dev-master"
+        "aleckyann/filter": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "type" : "project",
 
     "license": "MIT",
