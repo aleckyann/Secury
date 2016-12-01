@@ -1,5 +1,5 @@
 {
-    "name" : "aleckyann/Filter",
+    "name" : "aleckyann/filter",
     "description" : "Classe simples para filtrar e receber requisições GET e POST.",
     "require" : {
         "php" : ">=5.4"
