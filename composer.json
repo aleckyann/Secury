@@ -5,7 +5,7 @@
         "php" : ">=5.4",
         "aleckyann/filter": "dev-master"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "type" : "project",
 
     "license": "MIT",
@@ -13,6 +13,5 @@
         "name" : "Aleck Yann Marques de Matos",
         "email" : "aleckyann@gmail.com"
     }],
-    "minimum-stability": "dev",
     "prefer-stable": true
 }
