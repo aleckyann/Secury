@@ -5,8 +5,7 @@
         "php" : ">=5.4"
     },
     "type" : "project",
-    "version" : "1.0.1",
-    
+
     "license": "MIT",
     "authors": [{
         "name" : "Aleck Yann Marques de Matos",
