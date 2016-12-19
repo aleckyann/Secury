@@ -63,6 +63,15 @@ Filter::postBoolean('name_da_requisicao');
 
 > Caso sua requisição|entrada de dados não seja válida é retornada uma string com valor 'false'
 
+PROTEGER STRINGS QUE PODEM POSSUIR TEXTOS COM LINGUAGEM OFENSIVA, PALAVRIADOS INAPROPRIADOS, QUE PODERÃO POLUIR O AMBIENTE DE INTERAÇÃO DO SEU SISTEMA DE USUŔIOS MAL INTENCIONADOS:
+```
+Filter::getBadString('name_da_requisicao');
+
+Filter::postBadString('name_da_requisicao');
+```
+> Caso usuário envie um palavrão(bad language), este é trocado por '#$%@!'
+
+
 ---
 
 ### VOCÊ TAMBÉM PODERÁ DEFINIR VALORES MÍNIMOS E MÁXIMOS PARA SUAS ENTRADAS PASSANDO O SEGUNDO E TERCEIRO ARGUMENTO DAS FUNÇÕES, VEJA:
