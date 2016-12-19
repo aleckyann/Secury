@@ -61,13 +61,11 @@ Filter::getBoolean('name_da_requisicao');
 Filter::postBoolean('name_da_requisicao');
 ```
 
-### Caso sua requisição|entrada de dados não seja válida é retornada uma string com valor 'false'
+> Caso sua requisição|entrada de dados não seja válida é retornada uma string com valor 'false'
 
 ---
 
-### VOCÊ TAMBÉM PODERÁ DEFINIR VALORES MÍNIMOS E MÁXIMOS PARA SUAS ENTRADAS PASSANDO O SEGUNDO E TERCEIRO ARGUMENTO DAS FUNÇÕES.
----
-Veja:
+### VOCÊ TAMBÉM PODERÁ DEFINIR VALORES MÍNIMOS E MÁXIMOS PARA SUAS ENTRADAS PASSANDO O SEGUNDO E TERCEIRO ARGUMENTO DAS FUNÇÕES, VEJA:
 ```
 Filter::postString('name_da_requisicao', 1, 40);
 ```
