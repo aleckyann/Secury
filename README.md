@@ -63,7 +63,7 @@ Filter::postBoolean('name_da_requisicao');
 
 > Caso sua requisição|entrada de dados não seja válida é retornada uma string com valor 'false'
 
-PROTEGER STRINGS QUE PODEM POSSUIR TEXTOS COM LINGUAGEM OFENSIVA, PALAVRIADOS INAPROPRIADOS, QUE PODERÃO POLUIR O AMBIENTE DE INTERAÇÃO DO SEU SISTEMA DE USUŔIOS MAL INTENCIONADOS:
+FILTRAR STRING E PROTEGÊ-LAS DE PALAVRIADOS INAPROPRIAPODES|BAD LANGUAGES:
 ```
 Filter::getBadString('name_da_requisicao');
 
