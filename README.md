@@ -64,5 +64,18 @@ Filter::postBoolean('name_da_requisicao');
 ### Caso sua requisição não seja válida é retornada uma string com valor 'false'
 ---
 
-Os filtros podem proteger sua aplicação de diversos injections, tais como: PHP injection, script injection, html injection |  XSS, além de tipar a entrada de dados.
+VOCÊ TAMBÉM PODERÁ DEFINIR VALORES MÍNIMOS E MÁXIMOS PARA SUAS ENTRADAS PASSANDO O SEGUNDO E TERCEIRO ARGUMENTO DAS FUNÇÕES.
+---
+Veja:
+```
+Filter::postString('name_da_requisicao', 1, 40);
+```
+>Este código retornará `false` caso a string de entrada seja menor que 1 caracter ou maior que 40 caracteres.
 
+Caso queira apenas definir um comportamento "required", atribua 1 como segundo argumento da função, dessa forma valores como `null` vão retornar `false`, Veja:
+```
+Filter::postInt('name_da_requisicao', 1);
+```
+
+Os filtros podem proteger sua aplicação de diversos injections, tais como: PHP injection, script injection, html injection |  XSS, além de tipar a entrada de dados.
+A tipagem de suas entradas oferece uma robustes maior à suas aplicações.
