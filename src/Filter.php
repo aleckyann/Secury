@@ -134,7 +134,7 @@ class Filter
 
   static function postBadString($name, $minLength = 0, $maxLength = 255, $resultado = null)
   {
-    $badLanguage = ['cú', 'porra', 'caralho', 'merda', 'fuder', 'puta', 'rapariga', 'traveco', 'viado', 'cuzão', 'baitola', 'putinha', 'viadinho'];        
+    $badLanguage = ['cú', 'porra', 'caralho', 'merda', 'fuder', 'puta', 'rapariga', 'traveco', 'viado', 'cuzão', 'baitola', 'putinha', 'viadinho', 'fdp', 'corno', 'putinha', 'desgraçado'];        
     $input = filter_input(INPUT_POST, $name, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
     if(strlen($input) < $minLength || strlen($input) > $maxLength) return 'false';
     $input = str_replace($badLanguage, '#$%@!', $input);
@@ -149,7 +149,7 @@ class Filter
 
   static function getBadString($name, $minLength = 0, $maxLength = 255, $resultado = null)
   {
-    $badLanguage = ['cú', 'porra', 'caralho', 'merda', 'fuder', 'puta', 'rapariga', 'traveco', 'viado', 'cuzão', 'baitola', 'putinha', 'viadinho'];    
+    $badLanguage = ['cú', 'porra', 'caralho', 'merda', 'fuder', 'puta', 'rapariga', 'traveco', 'viado', 'cuzão', 'baitola', 'putinha', 'viadinho', 'fdp', 'corno', 'putinha', 'desgraçado'];    
     $input = filter_input(INPUT_GET, $name, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
     if(strlen($input) < $minLength || strlen($input) > $maxLength) return 'false';
     $resultado = strip_tags($input);
