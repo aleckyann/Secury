@@ -2,12 +2,12 @@
 ===
 
 * Tipagem de suas variáveis, atravéz do controle das entradas GET e POST:
-  * Número inteiros: 0, 1, 2, 3, 4, 5, 88, 572, ...
-  * Decimais(float): 0.21, 1.333333. 93.33, ...
-  * Strings: 'Olá mundo', 'hakunamatata', ...
-  * Emails: 'teste@gmail.com', 'example@example.com.br', ...
-  * Boolean: 0, 1, false, true.
-  * bad_languages: 'censured :)'.
+  * Números inteiros: `0, 1, 2, 3, 4, 5, 88, 572, ...`
+  * Números decimais(float): `0.21, 1.333333. 93.33, ...`
+  * Strings: `Olá mundo, hakunamatata, ...`
+  * Emails: `teste@gmail.com, example@example.com.br, ...``
+  * Boolean: `0, 1, false, true`
+  * bad_languages: `censured :)`
 
 * Controle de tamanho das variáveis:
   * max length.
@@ -81,7 +81,6 @@ secury::getBoolean('name_da_requisicao');
 
 secury::postBoolean('name_da_requisicao');
 ```
-
 
 > Caso sua requisição|entrada de dados não seja válida é retornada uma string com valor 'false'
 
