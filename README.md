@@ -108,3 +108,29 @@ secury::postInt('name_da_requisicao', 1);
 
 Os filtros podem proteger sua aplicação de diversos injections, tais como: PHP injection, script injection, html injection |  XSS, além de tipar a entrada de dados.
 A tipagem de suas entradas oferece uma robustes maior à suas aplicações.
+
+
+CSRF protection
+---
+
+Para proteger suas requisições de ataques CSRF, faça como este exemplo:
+
+```
+<form>
+<input type="text" name="nome">
+secury::csrfStart();
+<input type="submit" value="Enviar">
+</form>
+```
+>Este método gera um input com um token de segurança, que é gerado automaticamente de forma dinâmica.
+
+Em seguida, em seu controller, faça a verificação atravéz de outro método:
+```
+$resultadoCSRF = secury::csrfEnd();
+
+if($resultadoCSRF == false){
+  header('Location: index');
+} else {
+  // OK
+}
+```
