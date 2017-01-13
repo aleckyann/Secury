@@ -117,7 +117,8 @@ Para proteger suas requisições de ataques CSRF, faça como este exemplo:
 
 ```
 <form>
-<input type="text" name="nome">
+<input type="text" name="login">
+<input type="password" name="senha">
 secury::csrfStart();
 <input type="submit" value="Enviar">
 </form>
@@ -131,6 +132,6 @@ $resultadoCSRF = secury::csrfEnd();
 if($resultadoCSRF == false){
   header('Location: index');
 } else {
-  // OK
+  login($pdo, $nome, $senha);
 }
 ```
