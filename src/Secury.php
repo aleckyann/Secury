@@ -155,7 +155,7 @@ class Post
 
   static function badString($name, $minLength = 0, $maxLength = 255, $resultado = null)
   {
-    $badLanguage = ['cú', 'porra', 'caralho', 'merda', 'fuder', 'puta', 'rapariga', 'traveco', 'viado', 'cuzão', 'baitola', 'putinha', 'viadinho', 'fdp', 'corno', 'putinha', 'desgraçado'];
+    $badLanguage = ['cú', 'porra', 'caralho', 'merda', 'fuder', 'puta', 'rapariga', 'traveco', 'viado', 'cuzão', 'cuzao', 'baitola', 'putinha', 'viadinho', 'fdp', 'corno', 'putão', 'desgraçado', 'CÚ', 'PORRA', 'CARALHO', 'MERDA', 'FUDER', 'PUTA', 'RAPARIGA', 'TRAVECO', 'VIADO', 'CUZÃO', 'CUZAO', 'BAITOLA', 'PUTINHA', 'VIADINHO', 'FDP', 'CORNO', 'PUTÃO', 'DESGRAÇADO'];
     $input = filter_input(INPUT_POST, $name, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
     if(strlen($input) < $minLength || strlen($input) > $maxLength) return 'false';
     $input = str_replace($badLanguage, '#$%@!', $input);
@@ -174,7 +174,7 @@ class Post
 class Csrf
 {
 
-  static function form(){
+  static function input(){
     if(!$_SESSION) {
       session_start();
     }
@@ -186,7 +186,7 @@ class Csrf
     if(!$_SESSION) {
       session_start();
     }
-    $value = $_POST['csrf'];
+    $value = filter_input(INPUT_POST, 'csrf', FILTER_VALIDATE_INT);
     if($value == $_SESSION['csrf']){
       unset($_SESSION['csrf']);
       return 'true';

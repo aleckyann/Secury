@@ -9,6 +9,8 @@ $data['ativo'] = post::boolean('usuario_ativo');
 $data['bad_language'] = post::badString('bad_language');
 $data['csrf'] = csrf::verify();
 
+echo "<h3>RESULT REQUEST:</h3><hr>";
 echo('<pre>');
 print_r($data);
 echo('</pre>');
+echo('<hr>');

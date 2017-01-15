@@ -120,7 +120,7 @@ Para proteger suas requisições de ataques CSRF, faça como este exemplo:
 <form>
 <input type="email" name="login">
 <input type="password" name="senha">
-<?= csrf::form() ?>
+<?= csrf::input() ?>
 <input type="submit" value="Enviar">
 </form>
 ```
