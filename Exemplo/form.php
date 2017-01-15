@@ -14,7 +14,7 @@
         <input type="text" name="usuario_money" placeholder="money">
         <input type="text" name="usuario_ativo" placeholder="ativo">
         <input type="text" name="bad_language" placeholder="bad language">
-        <?= secury::csrfStart(); ?>
+        <?= csrf::form(); ?>
         <input type="submit" value="Enviar">
     </form>
 

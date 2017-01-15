@@ -35,13 +35,13 @@ composer require aleckyann/secury:dev-master
 ### Para receber e filtrar requisições post, exemplo:
 ---
 ```
-$email = secury::postEmail('email');
+$email = post::email('email');
 ```
 
 ### Para receber e filtrar requisições get, exemplo:
 ---
 ```
-$id = secury::getInt('id');
+$id = get::int('id');
 ```
 
 ### Você poderá usar 5 tipos de filtros para requisições do tipo GET e 5 para requisições do tipo POST, veja:
@@ -49,46 +49,46 @@ $id = secury::getInt('id');
 
 VALIDAR EMAILS:
 ```     
-secury::getEmail('name_da_requisicao');
+get::email('name_da_requisicao');
 
-secury::postEmail('name_da_requisicao');
+post::email('name_da_requisicao');
 ```
 
 VALIDAR INTEIROS:
 ```  
-secury::getInt('name_da_requisicao');
+get::int('name_da_requisicao');
 
-secury::postInt('name_da_requisicao');
+post::int('name_da_requisicao');
 ```
 
 VALIDAR FLOATS:
 ```     
-secury::getFloat('name_da_requisicao');
+get::float('name_da_requisicao');
 
-secury::postFloat('name_da_requisicao');
+post::float('name_da_requisicao');
 ```
 
 VALIDAR STRINGS:
 ```   
-secury::getString('name_da_requisicao');
+get::string('name_da_requisicao');
 
-secury::postString('name_da_requisicao');
+post::string('name_da_requisicao');
 ```
 
 VALIDAR BOOLEANOS:
 ```
-secury::getBoolean('name_da_requisicao');
+get::boolean('name_da_requisicao');
 
-secury::postBoolean('name_da_requisicao');
+post::boolean('name_da_requisicao');
 ```
 
 > Caso sua requisição|entrada de dados não seja válida é retornada uma string com valor 'false'
 
 FILTRAR STRING E PROTEGÊ-LAS DE PALAVRIADOS INAPROPRIAPODES|BAD LANGUAGES:
 ```
-secury::getBadString('name_da_requisicao');
+get::badString('name_da_requisicao');
 
-secury::postBadString('name_da_requisicao');
+post::badString('name_da_requisicao');
 ```
 > Caso usuário envie um palavrão(bad language), este é trocado por '#$%@!'
 
@@ -97,13 +97,13 @@ secury::postBadString('name_da_requisicao');
 
 ### VOCÊ TAMBÉM PODERÁ DEFINIR VALORES MÍNIMOS E MÁXIMOS PARA SUAS ENTRADAS PASSANDO O SEGUNDO E TERCEIRO ARGUMENTO DAS FUNÇÕES, VEJA:
 ```
-secury::postString('name_da_requisicao', 1, 40);
+post::string('name_da_requisicao', 1, 40);
 ```
 >Este código retornará `false` caso a string de entrada seja menor que 1 caracter ou maior que 40 caracteres.
 
 Caso queira apenas definir um comportamento "required", atribua 1 como segundo argumento da função, dessa forma valores como `null` vão retornar `false`, Veja:
 ```
-secury::postInt('name_da_requisicao', 1);
+post::int('name_da_requisicao', 1);
 ```
 
 Os filtros podem proteger sua aplicação de diversos injections, tais como: PHP injection, script injection, html injection |  XSS, além de tipar a entrada de dados.
@@ -119,7 +119,7 @@ Para proteger suas requisições de ataques CSRF, faça como este exemplo:
 <form>
 <input type="text" name="login">
 <input type="password" name="senha">
-secury::csrfStart();
+csrf::form();
 <input type="submit" value="Enviar">
 </form>
 ```
@@ -127,7 +127,7 @@ secury::csrfStart();
 
 Em seguida, em seu controller, faça a verificação atravéz de outro método:
 ```
-$resultadoCSRF = secury::csrfEnd();
+$resultadoCSRF = csrf::verify();
 
 if($resultadoCSRF == false){
   header('Location: index');

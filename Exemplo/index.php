@@ -1,13 +1,13 @@
 <?php
 require_once('../src/Secury.php');
 
-$data['id'] = secury::postInt('usuario_id', 3);
-$data['nome'] = secury::postString('usuario_nome');
-$data['email'] = secury::postEmail('usuario_email');
-$data['money'] = secury::postFloat('usuario_money');
-$data['ativo'] = secury::postBoolean('usuario_ativo');
-$data['bad_language'] = secury::postBadString('bad_language');
-$data['csrf'] = secury::csrfEnd();
+$data['id'] = post::int('usuario_id', 3);
+$data['nome'] = post::string('usuario_nome');
+$data['email'] = post::email('usuario_email');
+$data['money'] = post::float('usuario_money');
+$data['ativo'] = post::boolean('usuario_ativo');
+$data['bad_language'] = post::badString('bad_language');
+$data['csrf'] = csrf::verify();
 
 echo('<pre>');
 print_r($data);
