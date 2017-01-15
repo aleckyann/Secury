@@ -32,8 +32,6 @@ require_once('secury.php');
 composer require aleckyann/secury:dev-master
 ```
 
->`('name_da_requisicao', 'min-length', 'max-length');`
-
 ### Para receber e filtrar requisições post, exemplo:
 ---
 ```
@@ -48,6 +46,8 @@ $id = get::int('id');
 
 ### Você poderá usar 5 tipos de filtros para requisições do tipo GET e 5 para requisições do tipo POST, veja:
 ---
+
+>`('name_da_requisicao', 'min-length', 'max-length');`
 
 VALIDAR EMAILS:
 ```     
