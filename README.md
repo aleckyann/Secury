@@ -32,6 +32,8 @@ require_once('secury.php');
 composer require aleckyann/secury:dev-master
 ```
 
+>`('name_da_requisicao', 'min-length', 'max-length');`
+
 ### Para receber e filtrar requisições post, exemplo:
 ---
 ```
@@ -114,12 +116,11 @@ CSRF protection
 ---
 
 Para proteger suas requisições de ataques CSRF, faça como este exemplo:
-
 ```
 <form>
 <input type="email" name="login">
 <input type="password" name="senha">
-csrf::form();
+<?= csrf::form() ?>
 <input type="submit" value="Enviar">
 </form>
 ```
