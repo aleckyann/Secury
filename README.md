@@ -117,7 +117,7 @@ Para proteger suas requisições de ataques CSRF, faça como este exemplo:
 
 ```
 <form>
-<input type="text" name="login">
+<input type="email" name="login">
 <input type="password" name="senha">
 csrf::form();
 <input type="submit" value="Enviar">
@@ -127,11 +127,13 @@ csrf::form();
 
 Em seguida, em seu controller, faça a verificação atravéz de outro método:
 ```
+$login = post::email('login');
+$senha = post::string('senha');
 $resultadoCSRF = csrf::verify();
 
 if($resultadoCSRF == false){
   header('Location: index');
 } else {
-  login($pdo, $nome, $senha);
+  login($pdo, $login, $senha);
 }
 ```
