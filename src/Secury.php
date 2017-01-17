@@ -174,24 +174,23 @@ class Post
 class Csrf
 {
 
-  static function input(){
-    if(!$_SESSION) {
-      session_start();
-    }
-    $_SESSION['csrf'] = crc32(time());
-    echo('<input type="hidden" name="csrf" value="'.$_SESSION['csrf'].'">');
+  static function input()
+  {
+    if(!$_SESSION) session_start();
+    $_SESSION['value'] = crc32(time()) . md5(time()) . strtoupper(sha1(time())) . strtoupper(md5(time())) . sha1(time());
+    echo('<input type="hidden" name="@secury" value="'.$_SESSION['value'].'">');
   }
 
-  static function verify(){
-    if(!$_SESSION) {
-      session_start();
-    }
-    $value = filter_input(INPUT_POST, 'csrf', FILTER_VALIDATE_INT);
-    if($value == $_SESSION['csrf']){
-      unset($_SESSION['csrf']);
+  static function verify()
+  {
+    if(!$_SESSION) session_start();
+
+    $value = filter_input(INPUT_POST, '@secury', FILTER_SANITIZE_STRING);
+    if($value == $_SESSION['value']){
+      unset($_SESSION['value']);
       return 'true';
     } else {
-      unset($_SESSION['csrf']);
+      unset($_SESSION['value']);
       return 'false';
     }
   }

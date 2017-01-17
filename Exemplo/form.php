@@ -1,5 +1,4 @@
 <?php require '../src/Secury.php'; ?>
-
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
@@ -16,6 +15,7 @@
         <input type="text" name="usuario_ativo" placeholder="boolean"><hr>
         <input type="text" name="bad_language" placeholder="bad language"><hr>
         <?= csrf::input(); ?>
+
         <input type="submit" value="Enviar">
     </form>
 

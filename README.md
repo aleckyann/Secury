@@ -86,7 +86,7 @@ post::boolean('name_da_requisicao');
 
 > Caso sua requisição|entrada de dados não seja válida é retornada uma string com valor 'false'
 
-FILTRAR STRING E PROTEGÊ-LAS DE PALAVRIADOS INAPROPRIAPODES|BAD LANGUAGES:
+FILTRAR STRING E PROTEGÊ-LAS DE PALAVRIADOS INAPROPRIAPOS|BAD LANGUAGES:
 ```
 get::badString('name_da_requisicao');
 
