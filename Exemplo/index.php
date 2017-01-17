@@ -8,9 +8,7 @@ $data['money'] = post::float('usuario_money');
 $data['ativo'] = post::boolean('usuario_ativo');
 $data['bad_language'] = post::badString('bad_language');
 $data['csrf'] = csrf::verify();
-$data['name'] = $_SESSION['@secury'];
 
-echo "<h3>RESULT REQUEST:</h3><hr>";
 echo('<pre>');
 print_r($data);
 echo('</pre>');
