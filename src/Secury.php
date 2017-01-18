@@ -197,5 +197,98 @@ class Csrf
 
 }
 
+/* Proteção de entrada e saída de dados de sessions */
+class var
+{
+
+  static function string($var, $maxLength = 255, $minLength = 0, $resultado = null)
+  {
+    $var_filtered = filter_var($var, FILTER_SANITIZE_STRING);
+    if(strlen($var_filtered) < $minLength || strlen($var_filtered) > $maxLength) return 'false';
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
+    }
+
+  }
+
+  static function int($var, $maxLength = 255, $minLength = 0, $resultado = null)
+  {
+    $var_filtered = filter_var($var, FILTER_VALIDATE_INT);
+    if(strlen($var_filtered) < $minLength || strlen($var_filtered) > $maxLength) return 'false';
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
+    }
+
+  }
+
+  static function float($var, $maxLength = 255, $minLength = 0, $resultado = null)
+  {
+    $var_filtered = filter_var($var, FILTER_VALIDATE_FLOAT);
+    if(strlen($var_filtered) < $minLength || strlen($var_filtered) > $maxLength) return 'false';
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
+    }
+
+  }
+
+  static function email($var, $maxLength = 255, $minLength = 0, $resultado = null)
+  {
+    $var_filtered = filter_var($var, FILTER_VALIDATE_EMAIL);
+    if(strlen($var_filtered) < $minLength || strlen($var_filtered) > $maxLength) return 'false';
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
+    }
+
+  }
+
+  static function boolean($var, $maxLength = 255, $minLength = 0, $resultado = null)
+  {
+    $var_filtered = filter_var($var, FILTER_VALIDATE_BOOLEAN);
+    if(strlen($var_filtered) < $minLength || strlen($var_filtered) > $maxLength) return 'false';
+    $resultado = strip_tags($input);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
+    }
+
+  }
+
+  static function badString($var, $minLength = 0, $maxLength = 255, $resultado = null)
+  {
+    $badLanguage = ['cú', 'porra', 'caralho', 'merda', 'fuder', 'puta', 'rapariga', 'traveco', 'viado', 'cuzão', 'cuzao', 'baitola', 'putinha', 'viadinho', 'fdp', 'corno', 'putão', 'desgraçado', 'CÚ', 'PORRA', 'CARALHO', 'MERDA', 'FUDER', 'PUTA', 'RAPARIGA', 'TRAVECO', 'VIADO', 'CUZÃO', 'CUZAO', 'BAITOLA', 'PUTINHA', 'VIADINHO', 'FDP', 'CORNO', 'PUTÃO', 'DESGRAÇADO'];
+
+    $var_filtered = filter_var($var, FILTER_SANITIZE_STRING);
+    if(strlen($var_filtered) < $minLength || strlen($var_filtered) > $maxLength) return 'false';
+    $var_filtered = str_replace($badLanguage, '#$%@!', $var_filtered);
+    $resultado = strip_tags($var_filtered);
+
+    if($resultado){
+      return $resultado;
+    } else {
+      return 'false';
+    }
+  }
+
+}
+
+
 
 ?>

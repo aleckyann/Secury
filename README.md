@@ -44,6 +44,12 @@ $email = post::email('email');
 $id = get::int('id');
 ```
 
+### Para filtrar variáveis dentro de sua aplicação, exemplo:
+---
+```
+$nome_com_sr = 'Sr. ' . var::string('nome');
+```
+
 ### Você poderá usar 5 tipos de filtros para requisições do tipo GET e 5 para requisições do tipo POST, veja:
 ---
 
@@ -54,6 +60,9 @@ VALIDAR EMAILS:
 get::email('name_da_requisicao');
 
 post::email('name_da_requisicao');
+
+var::email($email);
+
 ```
 
 VALIDAR INTEIROS:
@@ -61,6 +70,9 @@ VALIDAR INTEIROS:
 get::int('name_da_requisicao');
 
 post::int('name_da_requisicao');
+
+var::int($int);
+
 ```
 
 VALIDAR FLOATS:
@@ -68,6 +80,9 @@ VALIDAR FLOATS:
 get::float('name_da_requisicao');
 
 post::float('name_da_requisicao');
+
+var::float($float);
+
 ```
 
 VALIDAR STRINGS:
@@ -75,6 +90,9 @@ VALIDAR STRINGS:
 get::string('name_da_requisicao');
 
 post::string('name_da_requisicao');
+
+var::string($string);
+
 ```
 
 VALIDAR BOOLEANOS:
@@ -82,6 +100,9 @@ VALIDAR BOOLEANOS:
 get::boolean('name_da_requisicao');
 
 post::boolean('name_da_requisicao');
+
+var::boolean($boolean);
+
 ```
 
 > Caso sua requisição|entrada de dados não seja válida é retornada uma string com valor 'false'
@@ -91,6 +112,8 @@ FILTRAR STRING E PROTEGÊ-LAS DE PALAVRIADOS INAPROPRIAPOS|BAD LANGUAGES:
 get::badString('name_da_requisicao');
 
 post::badString('name_da_requisicao');
+
+var::badString($badString);
 ```
 > Caso usuário envie um palavrão(bad language), este é trocado por '#$%@!'
 
