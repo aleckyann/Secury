@@ -13,6 +13,7 @@
         <input type="text" name="usuario_email" placeholder="email"><hr>
         <input type="text" name="usuario_money" placeholder="float"><hr>
         <input type="text" name="usuario_ativo" placeholder="boolean"><hr>
+        <input type="text" name="usuario_cpf" placeholder="valid cpf"><hr>
         <input type="text" name="bad_language" placeholder="bad language"><hr>
         <?= csrf::input(); ?>
 

@@ -50,7 +50,7 @@ $id = get::int('id');
 $nome_com_sr = 'Sr. ' . var::string('nome');
 ```
 
-### Você poderá usar 5 tipos de filtros para requisições do tipo GET e 5 para requisições do tipo POST, veja:
+### Você poderá usar 6 tipos de filtros para requisições do tipo GET e 5 para requisições do tipo POST, veja:
 ---
 
 >`('name_da_requisicao', 'min-length', 'max-length');`
@@ -61,7 +61,7 @@ get::email('name_da_requisicao');
 
 post::email('name_da_requisicao');
 
-var::email($email);
+variavel::email($email);
 
 ```
 
@@ -71,7 +71,7 @@ get::int('name_da_requisicao');
 
 post::int('name_da_requisicao');
 
-var::int($int);
+variavel::int($int);
 
 ```
 
@@ -81,7 +81,7 @@ get::float('name_da_requisicao');
 
 post::float('name_da_requisicao');
 
-var::float($float);
+variavel::float($float);
 
 ```
 
@@ -91,7 +91,7 @@ get::string('name_da_requisicao');
 
 post::string('name_da_requisicao');
 
-var::string($string);
+variavel::string($string);
 
 ```
 
@@ -101,9 +101,24 @@ get::boolean('name_da_requisicao');
 
 post::boolean('name_da_requisicao');
 
-var::boolean($boolean);
+variavel::boolean($boolean);
 
 ```
+
+VALIDAR CPF:
+```
+get::cpf('name_da_requisicao');
+
+post::cpf('name_da_requisicao');
+
+variavel::cpf($boolean);
+
+```
+> Este método validará CPF com ou sem pontos e traços, retornando o CPF sem pontos e traços...
+
+
+---
+
 
 > Caso sua requisição|entrada de dados não seja válida é retornada uma string com valor 'false'
 
@@ -113,7 +128,7 @@ get::badString('name_da_requisicao');
 
 post::badString('name_da_requisicao');
 
-var::badString($badString);
+variavel::badString($badString);
 ```
 > Caso usuário envie um palavrão(bad language), este é trocado por '#$%@!'
 

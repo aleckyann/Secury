@@ -6,6 +6,7 @@ $data['nome'] = post::string('usuario_nome');
 $data['email'] = post::email('usuario_email');
 $data['money'] = post::float('usuario_money');
 $data['ativo'] = post::boolean('usuario_ativo');
+$data['ativo'] = post::cpf('usuario_cpf');
 $data['bad_language'] = post::badString('bad_language');
 $data['csrf'] = csrf::verify();
 
