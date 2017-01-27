@@ -5,8 +5,9 @@
   * Números inteiros: `0, 1, 2, 3, 4, 5, 88, 572, ...`
   * Números decimais(float): `0.21, 1.333333. 93.33, ...`
   * Strings: `Olá mundo, hakunamatata, ...`
-  * Emails: `teste@gmail.com, example@example.com.br, ...``
+  * Emails: `teste@gmail.com, example@example.com.br, ...`
   * Boolean: `0, 1, false, true`
+  * CPF: `106.312.266-05` ou `10631226605`
   * bad_languages: `censured :)`
 
 * Controle de tamanho das variáveis:
